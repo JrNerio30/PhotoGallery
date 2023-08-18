@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.container{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, minmax(240px));
+  /* This is to not overflowing the boxes when changing the sizes of the website (USE AUTO-FIT). */
+  grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  grid-auto-rows: 240px ;
+}
+
+.box-tall{
+  grid-row: span 2 / auto;
+}
+
+.box-wide{
+  grid-column: span 2 / auto;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #353535;
+  color: white;
+  font-size: 3rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: rgba(3,8,20,0.1) 0px 0.15rem 0.5rem, rgba(2,8,20,0.1) 0px 0.075rem 0.175rem;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.box:hover{
+  box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
+  transform: translateX(2px) translateY(-2px) scale(1.1);
+}
