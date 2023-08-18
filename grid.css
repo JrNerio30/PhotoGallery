@@ -37,7 +37,7 @@ body{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: all 500ms;
+  transition: all 600ms;
   cursor: pointer;
 }
 
